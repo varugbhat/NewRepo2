@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'sudo docker build -t varugbhat/myapprepo1 .'
+                sh 'sudo docker build -t varugbhat/myapprepo1:myApp'
             }
         }
         stage('Push') {
