@@ -15,7 +15,7 @@ pipeline {
                 sh 'sudo docker build -t varugbhat/myapprepo1 .'
             }
         }
-        stage(Push') {
+        stage('Push') {
             steps {
                 sh 'echo $DOCKERHUB_CREDENTIAL_PSW | docker login -u $DOCKERHUB_CREDENTIAL_USR --password-stdin'
                 sh 'docker push varugbhat/myapprepo1 .'
